@@ -1,2 +1,10 @@
 # express-mssql-starter
-Simple expressJs starter apps with mssql
+Simple ExpressJs starter REST API with mssql
+
+How to run 
+- `npm install`
+- `node .`
+
+How to run the test
+- `mocha test`
+
