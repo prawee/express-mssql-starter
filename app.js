@@ -1,9 +1,13 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 
 const indexRouter = require('./routes/index');
 
 app.use('/', indexRouter);
+
+// Body Parser Middleware
+app.use(bodyParser.json()); 
 
 //CORS Middleware
 app.use(function(req, res, next) {
