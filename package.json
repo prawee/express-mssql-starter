@@ -1,0 +1,27 @@
+{
+  "name": "express-mssql-starter",
+  "version": "1.0.0",
+  "description": "simple express starter apps with mssql",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irhamdz/express-mssql-starter.git"
+  },
+  "keywords": [
+    "expressjs",
+    "starterpack",
+    "mssql"
+  ],
+  "author": "Irham Dzuhri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/irhamdz/express-mssql-starter/issues"
+  },
+  "homepage": "https://github.com/irhamdz/express-mssql-starter#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
