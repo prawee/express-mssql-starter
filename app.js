@@ -4,14 +4,16 @@ const bodyParser = require('body-parser');
 const createError = require('http-errors');
 
 const indexRouter = require('./routes/index');
+const registRouter = require('./routes/registration');
 
 app.use('/', indexRouter);
+app.use('/api/registration', registRouter);
 
 // Body Parser Middleware
 app.use(bodyParser.json()); 
 
 //CORS Middleware
-app.use(function(req, res, next) {
+app.use((req, res, next) => {
   //Enabling CORS
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
@@ -35,6 +37,7 @@ app.use((err, req, res, next) => {
 
   // render the error page
   res.status(err.status || 500);
+  res.send(err);
 });
 
 //Setting up server
