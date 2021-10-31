@@ -6,11 +6,12 @@ const createError = require('http-errors');
 const indexRouter = require('./routes/index');
 const registRouter = require('./routes/registration');
 
-app.use('/', indexRouter);
-app.use('/api/registration', registRouter);
-
 // Body Parser Middleware
 app.use(bodyParser.json()); 
+
+// Routing
+app.use('/', indexRouter);
+app.use('/api/registration', registRouter);
 
 //CORS Middleware
 app.use((req, res, next) => {
